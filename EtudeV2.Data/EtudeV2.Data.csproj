@@ -49,12 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Entities\ApiUser.cs" />
     <Compile Include="Entities\AuthToken.cs" />
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\SiteUser.cs" />
-    <Compile Include="Entities\Tracks.cs" />
+    <Compile Include="Entities\Track.cs" />
+    <Compile Include="EtudeV2Context.cs" />
+    <Compile Include="EtudeV2Mapping.cs" />
+    <Compile Include="EtudeV2MigrationConfiguration.cs" />
+    <Compile Include="EtudeV2Repository.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IEtudeV2Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EtudeV2.Data.Entities
 {
-    public class Tracks
+    public class Track
     {
         public int Id { get; set; }
         public int ParentTrackId { get; set; }

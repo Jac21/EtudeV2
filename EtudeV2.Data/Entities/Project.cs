@@ -10,7 +10,7 @@ namespace EtudeV2.Data.Entities
     {
         public Project()
         {
-            ProjectTracks = new List<Tracks>();
+            ProjectTracks = new List<Track>();
         }
 
         public int Id { get; set; }
@@ -18,6 +18,6 @@ namespace EtudeV2.Data.Entities
         public string Description { get; set; }
         public int Version { get; set; }
         public string UserName { get; set; }
-        public ICollection<Tracks> ProjectTracks { get; set; } 
+        public ICollection<Track> ProjectTracks { get; set; } 
     }
 }
