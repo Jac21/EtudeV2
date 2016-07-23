@@ -14,5 +14,13 @@ namespace EtudeV2.Data
             this.AutomaticMigrationsEnabled = true;
             this.AutomaticMigrationDataLossAllowed = true;
         }
+
+#if DEBUG
+        protected override void Seed(EtudeV2Context context)
+        {
+            // Seed the DB
+            new EtudeV2Seeder(context).Seed();
+        }
+#endif
     }
 }

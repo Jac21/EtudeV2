@@ -57,6 +57,7 @@
     <Compile Include="EtudeV2Mapping.cs" />
     <Compile Include="EtudeV2MigrationConfiguration.cs" />
     <Compile Include="EtudeV2Repository.cs" />
+    <Compile Include="EtudeV2Seeder.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="IEtudeV2Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

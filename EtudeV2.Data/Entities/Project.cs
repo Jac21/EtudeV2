@@ -16,7 +16,7 @@ namespace EtudeV2.Data.Entities
         public int Id { get; set; }
         public DateTime CurrentDate { get; set; }
         public string Description { get; set; }
-        public int Version { get; set; }
+        public double Version { get; set; }
         public string UserName { get; set; }
         public ICollection<Track> ProjectTracks { get; set; } 
     }
