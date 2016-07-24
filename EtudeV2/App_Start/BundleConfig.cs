@@ -25,8 +25,16 @@ namespace EtudeV2
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/materialize.min.css",
+                      "~/Content/icons.css"
+                      ));
+
+            bundles.Add(new StyleBundle("~/Content/index-css").Include(
+                      "~/Content/materialize.min.css",
                       "~/Content/icons.css",
-                      "~/Content/index-style.css",
+                      "~/Content/index-style.css"
+                      ));
+
+            bundles.Add(new StyleBundle("~/Content/style-css").Include(
                       "~/Content/style.css",
                       "~/Content/viz-tree-style.css"
                       ));
