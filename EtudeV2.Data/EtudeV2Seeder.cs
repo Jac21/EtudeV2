@@ -1,5 +1,4 @@
 ﻿//#define TEST_SEED
-//#define FORCE_RECREATE
 
 using System;
 using System.Collections.Generic;
@@ -61,7 +60,8 @@ namespace EtudeV2.Data
                 var project = new Project()
                 {
                     CurrentDate = DateTime.Now,
-                    Description = "Sleep Paralysis",
+                    Name = "Sleep Paralysis",
+                    Description = "Track #1 of new EP",
                     Id = 0000,
                     ProjectTracks = new List<Track>()
                     {
@@ -95,6 +95,15 @@ namespace EtudeV2.Data
 
         public void Seed()
         {
+            /*
+#if TEST_SEED
+            _context.Database.ExecuteSqlCommand("DELETE FROM Projects.Tracks");
+            _context.Database.ExecuteSqlCommand("DELETE FROM Projects.Project");
+            _context.Database.ExecuteSqlCommand("DELETE FROM [User].AuthToken");
+            _context.Database.ExecuteSqlCommand("DELETE FROM [User].SiteUser");
+#endif
+             * */
+
             SeedSiteUsers();
             SeedProjectsAndTracks();
         }

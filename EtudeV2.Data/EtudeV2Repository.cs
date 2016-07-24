@@ -81,7 +81,7 @@ namespace EtudeV2.Data
 
         public Project GetProject(int id)
         {
-            return _context.Projects.Include("Project")
+            return _context.Projects.Include("ProjectTracks")
                 .Where(f => f.Id == id)
                 .FirstOrDefault();
         }

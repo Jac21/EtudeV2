@@ -1,0 +1,13 @@
+nav {
+  background: -webkit-linear-gradient(45deg, #1DAD9B, #FCFFC1);
+  background: linear-gradient(45deg, #1DAD9B, #FCFFC1);
+}
+
+#create-proj {
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #1DAD9B;
+  color: #FCFFC1;
+}
