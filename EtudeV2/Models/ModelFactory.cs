@@ -35,7 +35,7 @@ namespace EtudeV2.Models
         {
             return new TrackModel()
             {
-                Url = _urlHelper.Link("Tracks", new {id = track.Id}),
+                Url = _urlHelper.Link("Track", new {id = track.Id}),
                 Description = track.Description,
                 Title = track.Title
             };

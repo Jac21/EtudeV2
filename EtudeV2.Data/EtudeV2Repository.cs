@@ -81,9 +81,8 @@ namespace EtudeV2.Data
 
         public Project GetProject(int id)
         {
-            return _context.Projects.Include("ProjectTracks")
-                .Where(f => f.Id == id)
-                .FirstOrDefault();
+            return _context.Projects
+                .FirstOrDefault(f => f.Id == id);
         }
 
         /*
@@ -102,9 +101,8 @@ namespace EtudeV2.Data
 
         public Track GetTrack(int id)
         {
-            return _context.Tracks.Include("Track")
-                .Where(f => f.Id == id)
-                .FirstOrDefault();
+            return _context.Tracks
+                .FirstOrDefault(f => f.Id == id);
         }
 
         /*

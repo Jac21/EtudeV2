@@ -23,7 +23,7 @@ namespace EtudeV2.Data
                 {
                     AppId = "SSB3aWxsIG1ha2UgbXkgQVBJIHNlY3VyZQ==",
                     EmailAddress = "jcantu521@gmail.com",
-                    Id = 0000,
+                    Id = 1,
                     Name = "Jac21",
                     Password = "passwordOne",
                     Projects = new List<Project>()
@@ -38,7 +38,7 @@ namespace EtudeV2.Data
                 var token = new AuthToken()
                 {
                     Expiration = DateTime.Today.AddDays(365),
-                    Id = 0000,
+                    Id = 1,
                     SiteUser = siteUser,
                     Token = "1234567890"
                 };
@@ -62,7 +62,7 @@ namespace EtudeV2.Data
                     CurrentDate = DateTime.Now,
                     Name = "Sleep Paralysis",
                     Description = "Track #1 of new EP",
-                    Id = 0000,
+                    Id = 1,
                     ProjectTracks = new List<Track>()
                     {
                         Capacity = 1,
@@ -76,7 +76,7 @@ namespace EtudeV2.Data
                 var track = new Track()
                 {
                     Description = "Rhythm guitar track",
-                    Id = 0000,
+                    Id = 1,
                     ParentTrackId = 0,
                     Project = project,
                     Title = "Rhythm Guitar (Jeremy)",
