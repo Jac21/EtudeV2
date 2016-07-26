@@ -222,11 +222,7 @@
     <Content Include="fonts\Material-Design-Icons.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\Etude_Logo_V1.png" />
-    <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\angular.min.js.map" />
     <Content Include="fonts\Material-Design-Icons.eot" />
     <Content Include="fonts\Material-Design-Icons.ttf" />
     <Content Include="fonts\Material-Design-Icons.woff" />

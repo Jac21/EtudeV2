@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace EtudeV2.Models
+﻿namespace EtudeV2.Models
 {
     public class TrackModel
     {

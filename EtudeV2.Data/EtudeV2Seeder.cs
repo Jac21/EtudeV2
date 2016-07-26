@@ -10,9 +10,41 @@ namespace EtudeV2.Data
     {
         private readonly EtudeV2Context _context;
 
+        // For Seeding data purposes
+        private Random _random;
+        private string[] _siteUserNameStrings;
+        private string[] _projectNameStrings;
+        private string[] _trackTitleStrings;
+
         public EtudeV2Seeder(EtudeV2Context context)
         {
             this._context = context;
+
+            this._random = new Random();
+
+            this._siteUserNameStrings = new[]
+            {
+                "Jac21",
+                "Lv15",
+                "TestNameOne",
+                "TestNameDos"
+            };
+
+            this._projectNameStrings = new[]
+            {
+                "Sleep Paralysis",
+                "Intro",
+                "Heart to Say",
+                "Straight and Narrow"
+            };
+
+            this._trackTitleStrings = new[]
+            {
+                "Lead Guitar",
+                "Rhythm Guitar",
+                "Drums",
+                "Bass"
+            };
         }
 
         void SeedSiteUsers()
@@ -24,7 +56,7 @@ namespace EtudeV2.Data
                     AppId = "SSB3aWxsIG1ha2UgbXkgQVBJIHNlY3VyZQ==",
                     EmailAddress = "jcantu521@gmail.com",
                     Id = 1,
-                    Name = "Jac21",
+                    Name = _projectNameStrings[_random.Next(3)],
                     Password = "passwordOne",
                     Projects = new List<Project>()
                     {
@@ -60,7 +92,7 @@ namespace EtudeV2.Data
                 var project = new Project()
                 {
                     CurrentDate = DateTime.Now,
-                    Name = "Sleep Paralysis",
+                    Name = _projectNameStrings[_random.Next(3)],
                     Description = "Track #1 of new EP",
                     Id = 1,
                     ProjectTracks = new List<Track>()
@@ -79,7 +111,7 @@ namespace EtudeV2.Data
                     Id = 1,
                     ParentTrackId = 0,
                     Project = project,
-                    Title = "Rhythm Guitar (Jeremy)",
+                    Title = _trackTitleStrings[_random.Next(3)],
                     Version = 1.0
                 };
 
