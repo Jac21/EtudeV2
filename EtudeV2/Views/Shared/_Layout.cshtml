@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="projectApp">
 <head>
     @RenderSection("head", required: false)
     <meta charset="utf-8"/>
@@ -11,7 +11,7 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-    <body>
+    <body ng-cloak>
         @RenderBody()
 
         @Scripts.Render("~/bundles/jquery")

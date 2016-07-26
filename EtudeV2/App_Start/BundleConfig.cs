@@ -23,6 +23,17 @@ namespace EtudeV2
                       "~/Scripts/materialize.min.js"
                       ));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                    "~/Scripts/angular.min.js",
+                    "~/Scripts/angular-resource.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/projectApp").Include(
+                    "~/Scripts/app.js",
+                    "~/Scripts/Controllers/projectsController.js",
+                    "~/Scripts/Services/projectsService.js"
+                ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/materialize.min.css",
                       "~/Content/icons.css"
