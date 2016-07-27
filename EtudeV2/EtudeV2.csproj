@@ -221,7 +221,12 @@
     <Content Include="fonts\LICENSE.txt" />
     <Content Include="fonts\Material-Design-Icons.svg" />
     <Content Include="Global.asax" />
-    <Content Include="images\Etude_Logo_V1.png" />
+    <Content Include="images\covers\Blur.jpg" />
+    <Content Include="images\covers\Deafheaven.png" />
+    <Content Include="images\covers\ds.jpg" />
+    <Content Include="images\covers\fmj.jpg" />
+    <Content Include="images\logos\Etude_Logo_V1.png" />
+    <Content Include="images\logos\Etude_Logo_Yellow_V1.png" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="fonts\Material-Design-Icons.eot" />
     <Content Include="fonts\Material-Design-Icons.ttf" />
@@ -298,7 +303,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Projects\Index.cshtml" />
+    <Content Include="Views\Projects\Index.cshtml">
+      <BrowseToURL>~/Projects/Index</BrowseToURL>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EtudeV2.Data\EtudeV2.Data.csproj">

@@ -7,13 +7,14 @@
     <title>@ViewBag.Title - Etude Landing Page</title>
 
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/index-css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
     <body ng-cloak>
         @RenderBody()
 
+        @Scripts.Render("~/bundles/angular")
+        @Scripts.Render("~/bundles/projectApp")
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/materialize")
     </body>

@@ -2,18 +2,13 @@
 
 <html ng-app="projectApp">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
     <title>Explore Page</title>
-
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.js"></script>
-    <script src="~/Scripts/app.js"></script>
-    <script src="~/Scripts/Controllers/projectsController.js"></script>
-    <script src="~/Scripts/Services/projectsService.js"></script>
 
     @Styles.Render("~/Content/css")
 </head>
+
 <body ng-cloak>
     <div ng-controller="projectsController">
         <h1>Recently Created Projects</h1>
@@ -21,11 +16,17 @@
             <tbody>
             <tr ng-repeat="project in Projects">
                 <td>{{project.Name}}</td>
+                <td>{{project.Description}}</td>
             </tr>
             </tbody>
         </table>
     </div>
 
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.js"></script>
+    <script src="~/Scripts/app.js"></script>
+    <script src="~/Scripts/Controllers/projectsController.js"></script>
+    <script src="~/Scripts/Services/projectsService.js"></script>
     @Scripts.Render("~/bundles/materialize")
 </body>
 </html>

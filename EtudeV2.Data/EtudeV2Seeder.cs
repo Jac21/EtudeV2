@@ -56,7 +56,7 @@ namespace EtudeV2.Data
                     AppId = "SSB3aWxsIG1ha2UgbXkgQVBJIHNlY3VyZQ==",
                     EmailAddress = "jcantu521@gmail.com",
                     Id = 1,
-                    Name = _projectNameStrings[_random.Next(3)],
+                    Name = _siteUserNameStrings[_random.Next(3)],
                     Password = "passwordOne",
                     Projects = new List<Project>()
                     {

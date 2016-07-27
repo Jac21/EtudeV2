@@ -232,11 +232,10 @@ namespace EtudeV2.Data
             try
             {
                 var entity = _context.Projects.Where(f => f.Id == id).FirstOrDefault();
-                var childrenEntities = entity.ProjectTracks;
 
                 if (entity != null)
                 {
-                    _context.Tracks.RemoveRange(childrenEntities);
+                    DeleteTrack(id);
                     _context.Projects.Remove(entity);
                     return true;
                 }

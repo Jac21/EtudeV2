@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net;
 using System.Net.Http;
+using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using EtudeV2.Data;
 using EtudeV2.Models;
 
