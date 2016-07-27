@@ -1,6 +1,6 @@
 nav {
-  background: -webkit-linear-gradient(45deg, #1DAD9B, #FCFFC1);
-  background: linear-gradient(45deg, #1DAD9B, #FCFFC1);
+  background: -webkit-linear-gradient(45deg, #EE6E73, #FCFFC1);
+  background: linear-gradient(45deg, #EE6E73, #FCFFC1);
 }
 
 #create-proj {
@@ -8,6 +8,6 @@ nav {
 }
 
 .card {
-  background-color: #1DAD9B;
-  color: #FCFFC1;
+  background-color: -webkit-linear-gradient(45deg, #1DAD9B, #FCFFC1);
+    color: black;
 }

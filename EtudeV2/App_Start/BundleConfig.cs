@@ -30,7 +30,7 @@ namespace EtudeV2
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/projectApp").Include(
-                    "~/Scripts/app.js",
+                    "~/Scripts/projectApp.js",
                     "~/Scripts/Controllers/projectsController.js",
                     "~/Scripts/Services/projectsService.js",
                     "~/Scripts/projectRoutes.js"
@@ -38,18 +38,15 @@ namespace EtudeV2
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/materialize.min.css",
-                      "~/Content/icons.css"
+                      "~/Content/icons.css",
+                      "~/Content/style.css",
+                      "~/Content/viz-tree-style.css"
                       ));
 
             bundles.Add(new StyleBundle("~/Content/index-css").Include(
                       "~/Content/materialize.min.css",
                       "~/Content/icons.css",
                       "~/Content/index-style.css"
-                      ));
-
-            bundles.Add(new StyleBundle("~/Content/style-css").Include(
-                      "~/Content/style.css",
-                      "~/Content/viz-tree-style.css"
                       ));
         }
     }

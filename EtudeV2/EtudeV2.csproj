@@ -255,7 +255,8 @@
     <Content Include="fonts\Roboto-Light.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\angular-route.min.js" />
-    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\Controllers\tracksController.js" />
+    <Content Include="Scripts\projectApp.js" />
     <Content Include="Scripts\Controllers\projectsController.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -270,6 +271,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Services\projectsService.js" />
+    <Content Include="Scripts\Services\tracksServices.js" />
+    <Content Include="Scripts\trackApp.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
