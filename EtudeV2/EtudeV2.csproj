@@ -227,6 +227,7 @@
     <Content Include="images\covers\fmj.jpg" />
     <Content Include="images\logos\Etude_Logo_V1.png" />
     <Content Include="images\logos\Etude_Logo_Yellow_V1.png" />
+    <Content Include="partials\project-detail.html" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="fonts\Material-Design-Icons.eot" />
     <Content Include="fonts\Material-Design-Icons.ttf" />
@@ -236,10 +237,6 @@
     <Content Include="fonts\Roboto-Bold.ttf" />
     <Content Include="fonts\Roboto-Bold.woff" />
     <Content Include="fonts\Roboto-Bold.woff2" />
-    <Content Include="fonts\Roboto-Light.eot" />
-    <Content Include="fonts\Roboto-Light.ttf" />
-    <Content Include="fonts\Roboto-Light.woff" />
-    <Content Include="fonts\Roboto-Light.woff2" />
     <Content Include="fonts\Roboto-Medium.eot" />
     <Content Include="fonts\Roboto-Medium.ttf" />
     <Content Include="fonts\Roboto-Medium.woff" />
@@ -252,7 +249,12 @@
     <Content Include="fonts\Roboto-Thin.ttf" />
     <Content Include="fonts\Roboto-Thin.woff" />
     <Content Include="fonts\Roboto-Thin.woff2" />
+    <Content Include="fonts\Roboto-Light.eot" />
+    <Content Include="fonts\Roboto-Light.ttf" />
+    <Content Include="fonts\Roboto-Light.woff" />
+    <Content Include="fonts\Roboto-Light.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\Controllers\projectsController.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -264,6 +266,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\materialize.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="partials\project-list.html" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Services\projectsService.js" />
@@ -303,9 +306,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Projects\Index.cshtml">
-      <BrowseToURL>~/Projects/Index</BrowseToURL>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EtudeV2.Data\EtudeV2.Data.csproj">
@@ -317,10 +317,7 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\BaseApi\" />
-    <Folder Include="Views\Track\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

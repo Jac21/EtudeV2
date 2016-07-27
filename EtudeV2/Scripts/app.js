@@ -4,6 +4,23 @@
 
     // has dependency on project service
     angular.module('projectApp', [
-        'projectsService'
+        'projectsService',
+        'ngRoute'
+    ]).config([
+    '$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/api/projects', {
+                templateUrl: '/partials/project-list.html',
+                controller: 'projectsController'
+            }).
+            when('/api/projects/:projectId', {
+                templateUrl: '/partials/project-detail.html',
+                controller: 'projectsController'
+            }).
+            otherwise({
+                redirectTo: '/api/projects'
+            });
+        }
     ]);
 })();

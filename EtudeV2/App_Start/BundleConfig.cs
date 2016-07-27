@@ -25,13 +25,15 @@ namespace EtudeV2
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.min.js",
-                    "~/Scripts/angular-resource.min.js"
+                    "~/Scripts/angular-resource.min.js",
+                    "~/Scripts/angular-route.min.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/projectApp").Include(
                     "~/Scripts/app.js",
                     "~/Scripts/Controllers/projectsController.js",
-                    "~/Scripts/Services/projectsService.js"
+                    "~/Scripts/Services/projectsService.js",
+                    "~/Scripts/projectRoutes.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
