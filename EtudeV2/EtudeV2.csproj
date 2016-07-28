@@ -228,6 +228,8 @@
     <Content Include="images\logos\Etude_Logo_V1.png" />
     <Content Include="images\logos\Etude_Logo_Yellow_V1.png" />
     <Content Include="partials\project-detail.html" />
+    <Content Include="partials\track-detail.html" />
+    <Content Include="partials\track-list.html" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="fonts\Material-Design-Icons.eot" />
     <Content Include="fonts\Material-Design-Icons.ttf" />
@@ -256,6 +258,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\Controllers\tracksController.js" />
+    <Content Include="Scripts\Materialize\modalTrigger.js" />
     <Content Include="Scripts\projectApp.js" />
     <Content Include="Scripts\Controllers\projectsController.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -265,7 +268,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\materialize.min.js" />
+    <Content Include="Scripts\Materialize\materialize.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="partials\project-list.html" />
     <Content Include="Scripts\respond.js" />

@@ -4,7 +4,7 @@
     angular.module('trackApp', [
         'trackService',
         'ngRoute'
-    ]).configurable([
+    ]).config([
         '$routeProvider',
         function($routeProvider) {
             $routeProvider.

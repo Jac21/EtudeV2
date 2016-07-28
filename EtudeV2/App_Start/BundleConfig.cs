@@ -20,7 +20,8 @@ namespace EtudeV2
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/materialize").Include(
-                      "~/Scripts/materialize.min.js"
+                      "~/Scripts/Materialize/materialize.min.js",
+                      "~/Scripts/Materialize/modalTrigger.js"
                       ));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
@@ -32,8 +33,13 @@ namespace EtudeV2
             bundles.Add(new ScriptBundle("~/bundles/projectApp").Include(
                     "~/Scripts/projectApp.js",
                     "~/Scripts/Controllers/projectsController.js",
-                    "~/Scripts/Services/projectsService.js",
-                    "~/Scripts/projectRoutes.js"
+                    "~/Scripts/Services/projectsService.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/trackApp").Include(
+                    "~/Scripts/trackApp.js",
+                    "~/Scripts/Controllers/tracksController.js",
+                    "~/Scripts/Services/tracksService.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
