@@ -7,6 +7,7 @@ namespace EtudeV2.Models
         public string Url { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public string CoverArt { get; set; }
         public IEnumerable<TrackModel> Tracks { get; set; } 
     }
 }

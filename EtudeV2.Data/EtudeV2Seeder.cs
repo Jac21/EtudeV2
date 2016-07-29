@@ -15,6 +15,7 @@ namespace EtudeV2.Data
         private string[] _siteUserNameStrings;
         private string[] _projectNameStrings;
         private string[] _trackTitleStrings;
+        private string[] _coverArtPathStrings;
 
         public EtudeV2Seeder(EtudeV2Context context)
         {
@@ -44,6 +45,14 @@ namespace EtudeV2.Data
                 "Rhythm Guitar",
                 "Drums",
                 "Bass"
+            };
+
+            this._coverArtPathStrings = new[]
+            {
+                "/images/covers/Blur.jpg",
+                "/images/covers/Deafheaven.png",
+                "/images/covers/ds.jpg",
+                "/images/covers/fmj.jpg"
             };
         }
 
@@ -100,6 +109,7 @@ namespace EtudeV2.Data
                         Capacity = 1,
                     },
                     UserName = "Jac21",
+                    CoverArt = _coverArtPathStrings[_random.Next(3)],
                     Version = 1.0
                 };
 

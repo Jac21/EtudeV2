@@ -19,6 +19,7 @@ namespace EtudeV2.Data.Entities
         public string Description { get; set; }
         public double Version { get; set; }
         public string UserName { get; set; }
+        public string CoverArt { get; set; }
         public ICollection<Track> ProjectTracks { get; set; } 
     }
 }
