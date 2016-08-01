@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('trackApp', [
-        'trackService',
+        'tracksService',
         'ngRoute'
     ]).config([
         '$routeProvider',

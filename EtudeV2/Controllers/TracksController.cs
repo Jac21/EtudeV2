@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Http;
+using System.Web.Http;
 using EtudeV2.Data;
 using EtudeV2.Models;
 
@@ -22,6 +23,34 @@ namespace EtudeV2.Controllers
         {
             return TheModelFactory.Create(TheRepository.GetTrack(id));
         }
+
+        /* Post a new track
+        public HttpResponseMessage Post([FromBody]TrackModel track)
+        {
+            try
+            {
+                var entity = track;
+
+                if (entity == null)
+                {
+                    Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Could not read track entry in body");
+                }
+
+                if (TheRepository.SaveAll())
+                {
+                    return Request.CreateResponse(HttpStatusCode.Created, TheModelFactory.Create(entity));
+                }
+                else
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Write to DB not successful");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+        */
 
         // Delete Track by ID
         public HttpResponseMessage Delete(int id)

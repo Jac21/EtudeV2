@@ -17,10 +17,10 @@
             when('/api/projects/:projectId', {
                 templateUrl: '/partials/project-detail.html',
                 controller: 'projectsController'
-            }).
+            });/*.
             otherwise({
                 redirectTo: '/api/projects'
-            });
+            });*/
         }
     ]);
 })();
