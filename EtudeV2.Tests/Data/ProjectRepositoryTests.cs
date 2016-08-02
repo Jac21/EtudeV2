@@ -6,6 +6,7 @@ using EtudeV2.Data;
 using EtudeV2.Data.Entities;
 using NUnit.Framework;
 using Shouldly;
+using Moq;
 
 namespace EtudeV2.Tests.Data
 {
@@ -23,7 +24,7 @@ namespace EtudeV2.Tests.Data
         }
 
         [SetUp]
-        public void TestInit()
+        public void Test_Init()
         {
             _sampleProject = new Project()
             {
@@ -40,7 +41,7 @@ namespace EtudeV2.Tests.Data
         }
 
         [Test]
-        public void AddProjectWithDefaults()
+        public void Add_Project_With_Defaults()
         {
             // arrange
 
@@ -52,8 +53,9 @@ namespace EtudeV2.Tests.Data
             rowCount.ShouldBeGreaterThan(0);
         }
 
+
         [Test]
-        public void DeleteProjectWithDefaults()
+        public void Delete_Project_With_Defaults()
         {
             // arrange
             Context.Projects.Add(_sampleProject);
@@ -66,7 +68,7 @@ namespace EtudeV2.Tests.Data
         }
 
         [Test]
-        public void AddProjectWithIncorrectInput()
+        public void Add_Project_With_Incorrect_Input()
         {
             // arrange
 

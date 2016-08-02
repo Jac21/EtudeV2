@@ -20,8 +20,7 @@ namespace EtudeV2
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/materialize").Include(
-                      "~/Scripts/Materialize/materialize.min.js",
-                      "~/Scripts/Materialize/modalTrigger.js"
+                      "~/Scripts/Materialize/materialize.min.js"
                       ));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(

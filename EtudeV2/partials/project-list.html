@@ -1,54 +1,5 @@
-﻿<!-- Modal Trigger -->
-<div class="row">
-    <a id="create-proj" class="waves-effect waves-light btn col s3 offset-s9 modal-trigger " href="#add-project-modal">Create Project</a>
-</div>
-
-<!-- Modal Structure -->
-<!-- TODO: Add validation -->
-<div id="add-project-modal" class="modal">
-    <div class="modal-content">
-
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-
-                    <div class="input-field col s12">
-                        <input type="text" class="validate" id="project-name">
-                        <label for="first_name">Project Name</label>
-                    </div>
-
-                </div>
-                <div class="row">
-
-                    <div class="input-field col s12">
-                        <input type="text" class="validate" id="project-description">
-                        <label for="last_name">Description</label>
-                    </div>
-
-                </div>
-            </form>
-        </div>
-
-        <!--Upload Cover Art File-->
-        <form action="#">
-            <div class="file-field input-field">
-
-                <div class="btn">
-                    <span>Upload Cover Art</span>
-                    <input type="file" accept="image/*" id="project-art">
-                </div>
-
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
-                </div>
-
-            </div>
-        </form>
-    </div>
-
-    <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="project-submit">Submit</a>
-    </div>
+﻿<div class="row">
+    <a id="create-proj" class="waves-effect waves-light btn col s3 offset-s9 modal-trigger " href="#">Create Project</a>
 </div>
 
 <!--Project Cards-->
@@ -65,7 +16,7 @@
                 <p>{{project.Description}}</p>
             </div>
             <div class="card-action">
-                <a href="/api/tracks">Take me to the repo tree</a>
+                <a href="/#/api/tracks">Take me to the repo tree</a>
             </div>
         </div>
     </div>

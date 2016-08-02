@@ -192,6 +192,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JasmineController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
     <Compile Include="Controllers\TracksController.cs" />
@@ -214,6 +215,8 @@
     </Content>
     <Content Include="Content\icon.css" />
     <Content Include="Content\index-style.css" />
+    <Content Include="Content\jasmine\jasmine.css" />
+    <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Content\materialize.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\viz-tree-style.css" />
@@ -227,7 +230,10 @@
     <Content Include="images\covers\fmj.jpg" />
     <Content Include="images\logos\Etude_Logo_V1.png" />
     <Content Include="images\logos\Etude_Logo_Yellow_V1.png" />
+    <Content Include="partials\create-project.html" />
+    <Content Include="partials\create-track.html" />
     <Content Include="partials\project-detail.html" />
+    <Content Include="partials\splash-page.html" />
     <Content Include="partials\track-detail.html" />
     <Content Include="partials\track-list.html" />
     <Content Include="Scripts\angular-resource.js" />
@@ -258,7 +264,14 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\Controllers\tracksController.js" />
-    <Content Include="Scripts\Materialize\modalTrigger.js" />
+    <Content Include="Scripts\jasmine-samples\Player.js" />
+    <Content Include="Scripts\jasmine-samples\PlayerSpec.js" />
+    <Content Include="Scripts\jasmine-samples\Song.js" />
+    <Content Include="Scripts\jasmine-samples\SpecHelper.js" />
+    <Content Include="Scripts\jasmine\boot.js" />
+    <Content Include="Scripts\jasmine\console.js" />
+    <Content Include="Scripts\jasmine\jasmine-html.js" />
+    <Content Include="Scripts\jasmine\jasmine.js" />
     <Content Include="Scripts\projectApp.js" />
     <Content Include="Scripts\Controllers\projectsController.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -277,6 +290,8 @@
     <Content Include="Scripts\Services\tracksService.js" />
     <Content Include="Scripts\trackApp.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Test\controllerTest.js" />
+    <Content Include="Test\SpecRunner.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -312,6 +327,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Jasmine\SpecRunner.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EtudeV2.Data\EtudeV2.Data.csproj">

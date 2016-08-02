@@ -3,6 +3,10 @@ nav {
   background: linear-gradient(45deg, #EE6E73, #FCFFC1);
 }
 
+.log-in-row {
+    margin-top: 50%;
+}
+
 #create-proj {
   margin-top: 30px;
 }

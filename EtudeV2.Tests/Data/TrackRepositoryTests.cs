@@ -25,7 +25,7 @@ namespace EtudeV2.Tests.Data
         }
 
         [SetUp]
-        public void TestInit()
+        public void Test_Init()
         {
             _sampleTrack = new Track()
             {
@@ -39,7 +39,7 @@ namespace EtudeV2.Tests.Data
         }
 
         [Test]
-        public void AddTrackWithDefaults()
+        public void Add_Track_With_Defaults()
         {
             // arrange
 
@@ -52,7 +52,7 @@ namespace EtudeV2.Tests.Data
         }
 
         [Test]
-        public void DeleteTrackWithDefaults()
+        public void Delete_Track_With_Defaults()
         {
             // arrange
             Context.Tracks.Add(_sampleTrack);
@@ -65,7 +65,7 @@ namespace EtudeV2.Tests.Data
         }
 
         [Test]
-        public void AddTrackWithIncorrectInput()
+        public void Add_Track_With_Incorrect_Input()
         {
             // arrange
 
