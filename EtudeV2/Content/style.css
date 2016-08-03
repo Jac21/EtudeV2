@@ -3,8 +3,24 @@ nav {
   background: linear-gradient(45deg, #EE6E73, #FCFFC1);
 }
 
-.log-in-row {
-    margin-top: 50%;
+.img-div {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.promo-column {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.promo-header {
+    font-size: 1.7rem;
+    font-weight: 500;
+
 }
 
 #create-proj {

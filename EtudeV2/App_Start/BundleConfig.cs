@@ -19,10 +19,6 @@ namespace EtudeV2
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/materialize").Include(
-                      "~/Scripts/Materialize/materialize.min.js"
-                      ));
-
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.min.js",
                     "~/Scripts/angular-resource.min.js",
@@ -43,15 +39,8 @@ namespace EtudeV2
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/materialize.min.css",
-                      "~/Content/icons.css",
                       "~/Content/style.css",
-                      "~/Content/viz-tree-style.css"
-                      ));
-
-            bundles.Add(new StyleBundle("~/Content/index-css").Include(
-                      "~/Content/materialize.min.css",
-                      "~/Content/icons.css",
-                      "~/Content/index-style.css"
+                      "~/Content/font-awesome.min.css"
                       ));
         }
     }

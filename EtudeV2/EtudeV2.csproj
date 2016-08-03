@@ -213,6 +213,7 @@
     <Content Include="App_Data\EtudeDb_log.ldf">
       <DependentUpon>EtudeDb.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\icon.css" />
     <Content Include="Content\index-style.css" />
     <Content Include="Content\jasmine\jasmine.css" />
@@ -221,6 +222,7 @@
     <Content Include="Content\style.css" />
     <Content Include="Content\viz-tree-style.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\LICENSE.txt" />
     <Content Include="fonts\Material-Design-Icons.svg" />
     <Content Include="Global.asax" />
@@ -230,12 +232,15 @@
     <Content Include="images\covers\fmj.jpg" />
     <Content Include="images\logos\Etude_Logo_V1.png" />
     <Content Include="images\logos\Etude_Logo_Yellow_V1.png" />
+    <Content Include="images\splash\disc.jpg" />
+    <Content Include="images\splash\vinyls.jpg" />
     <Content Include="partials\create-project.html" />
     <Content Include="partials\create-track.html" />
     <Content Include="partials\project-detail.html" />
     <Content Include="partials\splash-page.html" />
     <Content Include="partials\track-detail.html" />
     <Content Include="partials\track-list.html" />
+    <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="fonts\Material-Design-Icons.eot" />
     <Content Include="fonts\Material-Design-Icons.ttf" />
@@ -261,8 +266,14 @@
     <Content Include="fonts\Roboto-Light.ttf" />
     <Content Include="fonts\Roboto-Light.woff" />
     <Content Include="fonts\Roboto-Light.woff2" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\Controllers\tracksController.js" />
     <Content Include="Scripts\jasmine-samples\Player.js" />
     <Content Include="Scripts\jasmine-samples\PlayerSpec.js" />

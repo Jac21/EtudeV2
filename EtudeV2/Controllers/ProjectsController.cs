@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Http;
-using System.Web.Mvc;
-using System.Web.UI.WebControls;
+using System.Web.Http;
 using EtudeV2.Data;
 using EtudeV2.Models;
 
@@ -63,6 +62,33 @@ namespace EtudeV2.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK);
                 }
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+        // Patch existing project by ID
+        [System.Web.Mvc.HttpPut]
+        [System.Web.Mvc.HttpPatch]
+        public HttpResponseMessage Patch(int id, [FromBody] ProjectModel project)
+        {
+            try
+            {
+                var entity = TheRepository.GetProject(id);
+
+                if (entity == null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "Project not found!");
+                }
+
+                if (TheRepository.SaveAll())
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK);
+                }
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Bad Request");
             }
             catch (Exception ex)
             {
