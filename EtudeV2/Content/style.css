@@ -3,13 +3,29 @@ nav {
   background: linear-gradient(45deg, #EE6E73, #FCFFC1);
 }
 
+#header {
+    background-image: url("../images/splash/vinyls_cropped.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 55vh;
+    background-size: cover;
+    line-height: 1.2;
+    padding: 10vw 2em;
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#header h1 {
+    font-size: 3.5em;
+    color: black;
+}
+
+
 .img-div {
     margin-top: 2%;
     margin-bottom: 5%;
-}
-
-.hero-img {
-    width: 100%;
 }
 
 .promo-column {

@@ -232,8 +232,7 @@
     <Content Include="images\covers\fmj.jpg" />
     <Content Include="images\logos\Etude_Logo_V1.png" />
     <Content Include="images\logos\Etude_Logo_Yellow_V1.png" />
-    <Content Include="images\splash\disc.jpg" />
-    <Content Include="images\splash\vinyls.jpg" />
+    <Content Include="images\splash\vinyls_cropped.jpg" />
     <Content Include="partials\create-project.html" />
     <Content Include="partials\create-track.html" />
     <Content Include="partials\project-detail.html" />
@@ -350,7 +349,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

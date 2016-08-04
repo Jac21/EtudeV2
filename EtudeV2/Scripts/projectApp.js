@@ -23,6 +23,10 @@
                 templateUrl: '/partials/project-detail.html',
                 controller: 'projectsController'
             }).
+            when('/api/projects/create-project', {
+                templateUrl: '/partials/create-project.html',
+                controller: 'projectsController'
+            }).
             otherwise({
                 redirectTo: '/splash-page'
             });
