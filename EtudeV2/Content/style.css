@@ -22,10 +22,12 @@ nav {
     color: black;
 }
 
-
 .img-div {
-    margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 1.5em;
+}
+
+.row hr {
+    margin-bottom:1.5em;
 }
 
 .promo-column {
@@ -36,11 +38,20 @@ nav {
 .promo-header {
     font-size: 1.7rem;
     font-weight: 500;
-
 }
 
 #create-proj {
   margin-top: 30px;
+}
+
+#explore-header h1 {
+    text-align:center;
+    font-size:40px;
+}
+
+#explore-header hr {
+    width:10em;
+    margin-bottom:1em
 }
 
 .card {

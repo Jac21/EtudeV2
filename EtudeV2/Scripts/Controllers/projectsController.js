@@ -5,23 +5,10 @@
         .controller('projectsController', projectsController);
 
     // DI
-    projectsController.$inject = ['$scope', 'Projects'];
-
-    $scope.projectsList;
+    projectsController.$inject = ['$scope', '$routeParams', 'Projects'];
 
     // pass projects service
-    function projectsController($scope, Projects) {
+    function projectsController($scope, $routeParams, Projects) {
         $scope.Projects = Projects.query();
-        $scope.projectsList = $scope.Projects;
-    }
-
-    function getProject(projectId) {
-        $scope.projectsList.forEach(function(project) {
-            if (project.Id === projectId) {
-                return project;
-            }
-        });
-
-        return null;
     }
 })();
