@@ -24,41 +24,6 @@ namespace EtudeV2.Data
         }
 
         /*
-         *  Site User Methods
-         */
-
-        public IQueryable<SiteUser> FindUser(string searchString)
-        {
-            return _context.SiteUsers.Include("SiteUser")
-                .Where(f => f.Name.Contains(searchString));
-        }
-
-        public IQueryable<SiteUser> GetAllUsers()
-        {
-            return _context.SiteUsers;
-        }
-
-        public IQueryable<SiteUser> GetProjectsForUser(string userName)
-        {
-            return _context.SiteUsers.Include("Projects")
-                .Where(d => d.Name == userName);
-        }
-
-        public IQueryable<SiteUser> GetTracksForUser(string userName)
-        {
-            return _context.SiteUsers.Include("Projects")
-                .Include("ProjectTracks")
-                .Where(d => d.Name == userName);
-        }
-
-        public SiteUser GetSiteUser(int id)
-        {
-            return _context.SiteUsers.Include("SiteUser").
-                Where(f => f.Id == id).
-                FirstOrDefault();
-        }
-
-        /*
          * Project Methods
          */
 
@@ -120,19 +85,6 @@ namespace EtudeV2.Data
          *  Inserts
          */
 
-        public bool Insert(SiteUser siteUser)
-        {
-            try
-            {
-                _context.SiteUsers.Add(siteUser);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
         public bool Insert(Project project)
         {
             try
@@ -189,11 +141,6 @@ namespace EtudeV2.Data
             }
         }
 
-        public bool Update(SiteUser siteUser)
-        {
-            return UpdateEntity(_context.SiteUsers, siteUser);
-        }
-
         public bool Update(Project project)
         {
             return UpdateEntity(_context.Projects, project);
@@ -208,24 +155,6 @@ namespace EtudeV2.Data
          * Deletes
          */ 
 
-        public bool DeleteUser(int id)
-        {
-            try
-            {
-                var entity = _context.SiteUsers.Where(f => f.Id == id).FirstOrDefault();
-                if (entity != null)
-                {
-                    _context.SiteUsers.Remove(entity);
-                    return true;
-                }
-            }
-            catch
-            {
-                // Logging
-            }
-
-            return false;
-        }
 
         public bool DeleteProject(int id)
         {

@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using EtudeV2.Models;
+using EtudeV2.ViewModels;
+using EtudeV2.ViewModels.AccountViewModels;
 
 namespace EtudeV2.Controllers
 {

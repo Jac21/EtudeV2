@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="Entities\AuthToken.cs" />
     <Compile Include="Entities\Project.cs" />
-    <Compile Include="Entities\SiteUser.cs" />
     <Compile Include="Entities\Track.cs" />
     <Compile Include="EtudeV2Context.cs" />
     <Compile Include="EtudeV2Mapping.cs" />

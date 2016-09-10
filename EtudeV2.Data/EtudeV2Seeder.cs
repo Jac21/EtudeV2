@@ -56,44 +56,6 @@ namespace EtudeV2.Data
             };
         }
 
-        void SeedSiteUsers()
-        {
-            try
-            {
-                var siteUser = new SiteUser()
-                {
-                    AppId = "SSB3aWxsIG1ha2UgbXkgQVBJIHNlY3VyZQ==",
-                    EmailAddress = "jcantu521@gmail.com",
-                    Id = 1,
-                    Name = _siteUserNameStrings[_random.Next(3)],
-                    Password = "passwordOne",
-                    Projects = new List<Project>()
-                    {
-                        Capacity = 1,
-                    },
-                    Secret = "VGhpcyBDb3Vyc2UgSXMgQXdlc29tZQ=="
-                };
-
-                _context.SiteUsers.Add(siteUser);
-
-                var token = new AuthToken()
-                {
-                    Expiration = DateTime.Today.AddDays(365),
-                    Id = 1,
-                    SiteUser = siteUser,
-                    Token = "1234567890"
-                };
-
-                _context.AuthTokens.Add(token);
-
-                _context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("ERROR ON SEEDING SITE USERS, EXCEPTION:\n {0}", ex);
-            }
-        }
-
         void SeedProjectsAndTracks()
         {
             try
@@ -146,7 +108,6 @@ namespace EtudeV2.Data
 #endif
              * */
 
-            SeedSiteUsers();
             SeedProjectsAndTracks();
         }
     }

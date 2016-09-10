@@ -12,13 +12,6 @@ namespace EtudeV2.Data
         // general method
         bool SaveAll();
 
-        // Site Users
-        IQueryable<SiteUser> FindUser(string searchString);
-        IQueryable<SiteUser> GetAllUsers();
-        IQueryable<SiteUser> GetProjectsForUser(string userName);
-        IQueryable<SiteUser> GetTracksForUser(string userName);
-        SiteUser GetSiteUser(int id);
-
         // Project
         IQueryable<Project> FindProject(string searchString);
         IQueryable<Project> GetAllProjects();
@@ -38,18 +31,15 @@ namespace EtudeV2.Data
          */
 
         // Inserts
-        bool Insert(SiteUser siteUser);
         bool Insert(Project project);
         bool Insert(Track track);
         bool Insert(AuthToken token);
 
         // Update
-        bool Update(SiteUser siteUser);
         bool Update(Project project);
         bool Update(Track track);
 
         // Deletes
-        bool DeleteUser(int id);
         bool DeleteProject(int id);
         bool DeleteTrack(int id);
     }

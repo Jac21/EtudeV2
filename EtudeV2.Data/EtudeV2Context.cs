@@ -30,7 +30,6 @@ namespace EtudeV2.Data
         }
 
         public DbSet<AuthToken> AuthTokens { get; set; }
-        public DbSet<SiteUser> SiteUsers { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Track> Tracks { get; set; }
     }

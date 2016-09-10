@@ -14,18 +14,12 @@ namespace EtudeV2.Data
         {
             MapTracks(modelBuilder);
             MapProject(modelBuilder);
-            MapSiteUser(modelBuilder);
             MapAuthToken(modelBuilder);
         }
 
         static void MapAuthToken(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AuthToken>().ToTable("AuthToken", "User");
-        }
-
-        static void MapSiteUser(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<SiteUser>().ToTable("SiteUser", "User");
         }
 
         static void MapProject(DbModelBuilder modelBuilder)
