@@ -19,9 +19,9 @@ namespace EtudeV2.Controllers
         } 
 
         // Get Project by ID
-        public ProjectModel Get(int id)
+        public ProjectModel Get(int projectId)
         {
-            return TheModelFactory.Create(TheRepository.GetProject(id));
+            return TheModelFactory.Create(TheRepository.GetProject(projectId));
         }
 
         /* Post a new Project

@@ -3,6 +3,12 @@ nav {
   background: linear-gradient(45deg, #EE6E73, #FCFFC1);
 }
 
+@media all and (max-width: 1091px) {
+  .navbar-li {
+      display: none;
+  }
+}
+
 #header {
     background-image: url("../images/splash/vinyls_cropped.jpg");
     background-position: center top;
@@ -55,6 +61,5 @@ nav {
 }
 
 .card {
-  background-color: -webkit-linear-gradient(45deg, #1DAD9B, #FCFFC1);
     color: black;
 }

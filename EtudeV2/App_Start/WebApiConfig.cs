@@ -17,8 +17,8 @@ namespace EtudeV2
 
             config.Routes.MapHttpRoute(
                 name: "Project",
-                routeTemplate: "api/projects/{id}",
-                defaults: new { controller = "Projects", id = RouteParameter.Optional }
+                routeTemplate: "api/projects/{projectId}",
+                defaults: new { controller = "Projects", projectId = RouteParameter.Optional }
             );
 
             config.Routes.MapHttpRoute(

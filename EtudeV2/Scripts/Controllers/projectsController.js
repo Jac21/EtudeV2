@@ -9,6 +9,9 @@
 
     // pass projects service
     function projectsController($scope, $routeParams, Projects) {
+        console.log($routeParams);
+
+        $scope.project = Projects.get({ projectId: $routeParams.projectId });
         $scope.Projects = Projects.query();
     }
 })();
