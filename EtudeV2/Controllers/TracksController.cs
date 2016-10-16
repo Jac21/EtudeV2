@@ -24,17 +24,19 @@ namespace EtudeV2.Controllers
             return TheModelFactory.Create(TheRepository.GetTrack(id));
         }
 
-        /* Post a new track
+        // Post a new track
         public HttpResponseMessage Post([FromBody]TrackModel track)
         {
             try
             {
-                var entity = track;
+                var entity = TheModelFactory.Parse(track);
 
                 if (entity == null)
                 {
                     Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Could not read track entry in body");
                 }
+
+                TheRepository.Insert(entity);
 
                 if (TheRepository.SaveAll())
                 {
@@ -50,7 +52,6 @@ namespace EtudeV2.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
         }
-        */
 
         // Delete Track by ID
         public HttpResponseMessage Delete(int id)

@@ -55,6 +55,11 @@ nav {
     font-size:40px;
 }
 
+#explore-header p {
+    text-align:center;
+    font-size:20px;
+}
+
 #explore-header hr {
     width:10em;
     margin-bottom:1em
@@ -62,4 +67,9 @@ nav {
 
 .card {
     color: black;
+}
+
+/* Project Detail Styles */
+.project-detail-header {
+    text-align:center;
 }

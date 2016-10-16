@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net.Http;
 using System.Web.Http.Routing;
 using EtudeV2.Data;
@@ -8,13 +9,13 @@ namespace EtudeV2.Models
 {
     public class ModelFactory
     {
-        private UrlHelper _urlHelper;
-        public IEtudeV2Repository _repo { get; set; }
+        private readonly UrlHelper _urlHelper;
+        public IEtudeV2Repository Repo { get; set; }
 
         public ModelFactory(HttpRequestMessage request, IEtudeV2Repository repo)
         {
             this._urlHelper = new UrlHelper(request);
-            _repo = repo;
+            Repo = repo;
         }
 
         public ProjectModel Create(Project project)
@@ -36,6 +37,45 @@ namespace EtudeV2.Models
                 Description = track.Description,
                 Title = track.Title
             };
+        }
+
+        public Project Parse(ProjectModel model)
+        {
+            try
+            {
+                var entry = new Project
+                {
+                    Name = model.Name,
+                    Description = model.Description,
+                    UserName = model.Name,
+                    CoverArt = model.CoverArt
+                };
+
+                return entry;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public Track Parse(TrackModel model)
+        {
+            try
+            {
+                var entry = new Track
+                {
+                    Title = model.Title,
+                    Description = model.Description
+                };
+
+
+                return entry;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }

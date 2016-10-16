@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using EtudeV2.Data;
 using EtudeV2.Data.Entities;
 using NUnit.Framework;
 using Shouldly;
-using Moq;
 
 namespace EtudeV2.Tests.Data
 {
@@ -28,7 +26,6 @@ namespace EtudeV2.Tests.Data
         {
             _sampleProject = new Project()
             {
-                CurrentDate = DateTime.Now,
                 Description = "TestProject",
                 Id = 500,
                 Name = "TestProject",

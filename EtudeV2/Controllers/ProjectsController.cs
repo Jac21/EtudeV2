@@ -24,17 +24,19 @@ namespace EtudeV2.Controllers
             return TheModelFactory.Create(TheRepository.GetProject(projectId));
         }
 
-        /* Post a new Project
+        // Post a new Project 
         public HttpResponseMessage Post([FromBody]ProjectModel project)
         {
             try
             {
-                var entity = project;
+                var entity = TheModelFactory.Parse(project);
 
                 if (entity == null)
                 {
                     Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Could not read Project entry in body");
                 }
+
+                TheRepository.Insert(entity);
 
                 if (TheRepository.SaveAll())
                 {
@@ -50,14 +52,13 @@ namespace EtudeV2.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
         }
-         */
 
         // Delete an existing project by ID
-        public HttpResponseMessage Delete(int id)
+        public HttpResponseMessage Delete(int projectId)
         {
             try
             {
-                if (TheRepository.DeleteProject(id) && TheRepository.SaveAll())
+                if (TheRepository.DeleteProject(projectId) && TheRepository.SaveAll())
                 {
                     return Request.CreateResponse(HttpStatusCode.OK);
                 }
@@ -72,11 +73,11 @@ namespace EtudeV2.Controllers
         // Patch existing project by ID
         [System.Web.Mvc.HttpPut]
         [System.Web.Mvc.HttpPatch]
-        public HttpResponseMessage Patch(int id, [FromBody] ProjectModel project)
+        public HttpResponseMessage Patch(int projectId, [FromBody] ProjectModel project)
         {
             try
             {
-                var entity = TheRepository.GetProject(id);
+                var entity = TheRepository.GetProject(projectId);
 
                 if (entity == null)
                 {

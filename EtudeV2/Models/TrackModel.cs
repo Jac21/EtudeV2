@@ -12,6 +12,7 @@ namespace EtudeV2.Models
         public string Title { get; set; }
 
         [Required]
+        [StringLength(256)]
         public string Description { get; set; }
 
         public byte File { get; set; }

@@ -12,7 +12,6 @@ namespace EtudeV2.Data
 
         // For Seeding data purposes
         private Random _random;
-        private string[] _siteUserNameStrings;
         private string[] _projectNameStrings;
         private string[] _trackTitleStrings;
         private string[] _coverArtPathStrings;
@@ -22,14 +21,6 @@ namespace EtudeV2.Data
             this._context = context;
 
             this._random = new Random();
-
-            this._siteUserNameStrings = new[]
-            {
-                "Jac21",
-                "Lv15",
-                "TestNameOne",
-                "TestNameDos"
-            };
 
             this._projectNameStrings = new[]
             {
@@ -62,7 +53,6 @@ namespace EtudeV2.Data
             {
                 var project = new Project()
                 {
-                    CurrentDate = DateTime.Now,
                     Name = _projectNameStrings[_random.Next(3)],
                     Description = "Track #1 of new EP",
                     Id = 1,

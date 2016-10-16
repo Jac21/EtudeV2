@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +13,6 @@ namespace EtudeV2.Data.Entities
         }
 
         public int Id { get; set; }
-        public DateTime CurrentDate { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public double Version { get; set; }

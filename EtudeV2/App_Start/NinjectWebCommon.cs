@@ -72,8 +72,6 @@ namespace EtudeV2.App_Start
         {
             kernel.Bind<IEtudeV2Repository>().To<EtudeV2Repository>();
             kernel.Bind<EtudeV2Context>().To<EtudeV2Context>();
-
-            
         }        
     }
 }

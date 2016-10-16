@@ -14,6 +14,7 @@ namespace EtudeV2.Models
         public string Name { get; set; }
 
         [Required]
+        [StringLength(256)]
         public string Description { get; set; }
 
         public string CoverArt { get; set; }
