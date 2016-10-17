@@ -15,6 +15,10 @@
                 when('/api/tracks/:trackId', {
                     templateUrl: '/partials/track-detail.html',
                     controller: 'tracksController'
+                }).
+                when('/create-track', {
+                    templateUrl: '/partials/create-track.html',
+                    controller: 'tracksController'
                 });
         }
     ]);

@@ -23,7 +23,7 @@
                 templateUrl: '/partials/project-detail.html',
                 controller: 'projectsController'
             }).
-            when('/api/projects/create-project', {
+            when('/create-project', {
                 templateUrl: '/partials/create-project.html',
                 controller: 'projectsController'
             }).
