@@ -9,15 +9,15 @@
         function($routeProvider) {
             $routeProvider.
                 when('/api/tracks', {
-                    templateUrl: '/partials/track-list.html',
+                    templateUrl: '/partials/tracks/track-list.html',
                     controller: 'tracksController'
                 }).
                 when('/api/tracks/:trackId', {
-                    templateUrl: '/partials/track-detail.html',
+                    templateUrl: '/partials/tracks/track-detail.html',
                     controller: 'tracksController'
                 }).
                 when('/create-track', {
-                    templateUrl: '/partials/create-track.html',
+                    templateUrl: '/partials/tracks/create-track.html',
                     controller: 'tracksController'
                 });
         }

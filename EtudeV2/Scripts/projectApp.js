@@ -12,19 +12,23 @@
     function($routeProvider) {
         $routeProvider.
             when('/splash-page', {
-                templateUrl: '/partials/splash-page.html',
+                templateUrl: '/partials/structure/splash-page.html',
+                controller: 'projectsController'
+            }).
+            when('/learn', {
+                templateUrl: '/partials/structure/learn.html',
                 controller: 'projectsController'
             }).
             when('/api/projects', {
-                templateUrl: '/partials/project-list.html',
+                templateUrl: '/partials/projects/project-list.html',
                 controller: 'projectsController'
             }).
             when('/api/projects/:projectId', {
-                templateUrl: '/partials/project-detail.html',
+                templateUrl: '/partials/projects/project-detail.html',
                 controller: 'projectsController'
             }).
             when('/create-project', {
-                templateUrl: '/partials/create-project.html',
+                templateUrl: '/partials/projects/create-project.html',
                 controller: 'projectsController'
             }).
             otherwise({

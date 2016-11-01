@@ -1,0 +1,54 @@
+﻿<div class="container">
+
+    <div class="row">
+        <h3>Add a new Track or <a href="/#/api/projects">Go Back</a></h3>
+        <form class="col s12">
+            <div class="row">
+
+                <div class="input-field col s12">
+                    <input type="text" 
+                           class="validate" 
+                           id="track-title"
+                           ng-model="newTrack.trackTitle">
+                    <label for="track_title">Track Title</label>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="input-field col s12">
+                    <input type="text"
+                           class="validate"
+                           id="track-description"
+                           ng-model="newTrack.trackDescription">
+                    <label for="track_description">Description</label>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <!--Upload Track File-->
+    <form action="#">
+        <div class="file-field input-field">
+
+            <div class="btn">
+                <span>Upload Track</span>
+                <input type="file"
+                       accept="audio/*"
+                       id="track-file"
+                       ng-model="newTrack.trackFile">
+            </div>
+
+            <div class="file-path-wrapper">
+                <input class="file-path validate"
+                       type="text"
+                       ng-model="newTrack.trackFile">
+            </div>
+
+        </div>
+    </form>
+    
+    <button type="submit" ng-click="add()" class="btn waves-effect waves-light" id="track-add">Add</button>
+</div>
+

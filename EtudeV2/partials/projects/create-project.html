@@ -1,0 +1,54 @@
+﻿<div class="container">
+    
+    <div class="row">
+        <h3>Create a new Project or <a href="/#/api/projects">Go Back</a></h3>
+
+        <form class="col s12">
+            <div class="row">
+
+                <div class="input-field col s12">
+                    <input type="text"
+                           class="validate"
+                           id="project-name"
+                           ng-model="newProject.projectName">
+                    <label for="first_name">Project Name</label>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="input-field col s12">
+                    <input type="text"
+                           class="validate"
+                           id="project-description"
+                           ng-model="newProject.description">
+                    <label for="last_name">Description</label>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <!--Upload Cover Art File-->
+    <form action="#">
+        <div class="file-field input-field">
+
+            <div class="btn">
+                <span>Upload Cover Art</span>
+                <input type="file"
+                       accept="image/*"
+                       id="project-art"
+                       ng-model="newProject.coverArt">
+            </div>
+
+            <div class="file-path-wrapper">
+                <input class="file-path validate"
+                       type="text"
+                       ng-model="newProject.coverArt">
+            </div>
+
+        </div>
+    </form>
+
+    <button type="submit" ng-click="submit()" class="btn waves-effect waves-light" id="project-submit">Submit</button>
+</div>

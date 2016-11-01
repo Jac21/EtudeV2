@@ -3,7 +3,7 @@ nav {
   background: linear-gradient(45deg, #EE6E73, #FCFFC1);
 }
 
-@media all and (max-width: 1091px) {
+@media all and (max-width: 5628px) {
   .navbar-li {
       display: none;
   }
@@ -25,7 +25,7 @@ nav {
 
 #header h1 {
     font-size: 3.5em;
-    color: black;
+    color: whitesmoke;
 }
 
 .img-div {
@@ -54,17 +54,19 @@ nav {
   margin-top: 30px;
 }
 
-#explore-header h1 {
+.page-header {
     text-align:center;
-    font-size:40px;
 }
 
-#explore-header p {
-    text-align:center;
+.page-header > h1 {
+    font-size: 40px;
+}
+
+.page-header > p {
     font-size:20px;
 }
 
-#explore-header hr {
+.page-header > hr {
     width:10em;
     margin-bottom:1em
 }
