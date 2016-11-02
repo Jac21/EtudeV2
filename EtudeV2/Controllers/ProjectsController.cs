@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 using EtudeV2.Data;
 using EtudeV2.Models;
 
@@ -13,9 +14,18 @@ namespace EtudeV2.Controllers
             : base(repo) { }
 
         // Get action for Projects
-        public object Get()
+        [ResponseType(typeof(ProjectModel))]
+        public IHttpActionResult Get()
         {
-            return TheRepository.GetAllProjects();
+            try
+            {
+                return Ok(TheRepository.GetAllProjects());
+            }
+            catch (HttpResponseException)
+            {
+                return InternalServerError();
+            }
+            
         } 
 
         // Get Project by ID

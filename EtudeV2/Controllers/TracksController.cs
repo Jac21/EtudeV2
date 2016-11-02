@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
 using EtudeV2.Data;
 using EtudeV2.Models;
 
@@ -13,9 +14,17 @@ namespace EtudeV2.Controllers
             : base(repo) { }
 
         // Get action for Tracks
+        [ResponseType(typeof(TrackModel))]
         public object Get()
         {
-            return TheRepository.GetAllTracks();
+            try
+            {
+                return Ok(TheRepository.GetAllTracks());
+            }
+            catch (HttpResponseException)
+            {
+                return InternalServerError();
+            }
         }
 
         // Get Track by ID

@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace EtudeV2
 {
@@ -32,14 +31,24 @@ namespace EtudeV2
 
             bundles.Add(new ScriptBundle("~/bundles/projectApp").Include(
                     "~/Scripts/projectApp.js",
-                    "~/Scripts/Controllers/projectsController.js",
-                    "~/Scripts/Services/projectsService.js"
+                    "~/Scripts/Controllers/projects/projectsController.js",
+                    "~/Scripts/Services/projects/projectsService.js"
+                ));
+            
+            bundles.Add(new ScriptBundle("~/bundles/projectViewApp").Include(
+                    "~/Scripts/Controllers/projects/projectViewController.js",
+                    "~/Scripts/Services/projects/projectViewService.js"
+                ));
+            
+            bundles.Add(new ScriptBundle("~/bundles/projectCreateApp").Include(
+                    "~/Scripts/Controllers/projects/projectCreateController.js",
+                    "~/Scripts/Services/projects/projectCreateService.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/trackApp").Include(
                     "~/Scripts/trackApp.js",
-                    "~/Scripts/Controllers/tracksController.js",
-                    "~/Scripts/Services/tracksService.js"
+                    "~/Scripts/Controllers/tracks/tracksController.js",
+                    "~/Scripts/Services/tracks/tracksService.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

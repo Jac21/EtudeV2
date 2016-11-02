@@ -1,11 +1,12 @@
-﻿// http://proudmonkey.azurewebsites.net/asp-net-5-jump-start-to-angularjs-with-mvc-6-web-api/
-(function () {
+﻿(function () {
     'use strict';
 
     // has dependency on project service
     angular.module('projectApp', [
         'trackApp',
         'projectsService',
+        'projectViewService',
+        'projectCreateService',
         'ngRoute'
     ]).config([
     '$routeProvider',
@@ -25,11 +26,11 @@
             }).
             when('/api/projects/:projectId', {
                 templateUrl: '/partials/projects/project-detail.html',
-                controller: 'projectsController'
+                controller: 'projectViewController'
             }).
             when('/create-project', {
                 templateUrl: '/partials/projects/create-project.html',
-                controller: 'projectsController'
+                controller: 'projectCreateController'
             }).
             otherwise({
                 redirectTo: '/splash-page'

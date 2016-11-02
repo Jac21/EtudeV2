@@ -6,10 +6,10 @@ namespace EtudeV2.Controllers
 {
     public abstract class BaseApiController : ApiController
     {
-        private IEtudeV2Repository _repo;
+        private readonly IEtudeV2Repository _repo;
         private ModelFactory _modelFactory;
 
-        public BaseApiController(IEtudeV2Repository repo)
+        protected BaseApiController(IEtudeV2Repository repo)
         {
             this._repo = repo;
         }
@@ -24,15 +24,7 @@ namespace EtudeV2.Controllers
 
         protected ModelFactory TheModelFactory
         {
-            get
-            {
-                if (_modelFactory == null)
-                {
-                    _modelFactory = new ModelFactory(this.Request, TheRepository);
-                }
-
-                return _modelFactory;
-            }
+            get { return _modelFactory ?? (_modelFactory = new ModelFactory(this.Request, TheRepository)); }
         }
     }
 }
