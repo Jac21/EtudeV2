@@ -3,6 +3,8 @@
 
     angular.module('trackApp', [
         'tracksService',
+        'trackViewService',
+        'trackCreateService',
         'ngRoute'
     ]).config([
         '$routeProvider',
@@ -14,11 +16,11 @@
                 }).
                 when('/api/tracks/:trackId', {
                     templateUrl: '/partials/tracks/track-detail.html',
-                    controller: 'tracksController'
+                    controller: 'trackViewController'
                 }).
                 when('/create-track', {
                     templateUrl: '/partials/tracks/create-track.html',
-                    controller: 'tracksController'
+                    controller: 'trackCreateController'
                 });
         }
     ]);

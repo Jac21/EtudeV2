@@ -29,6 +29,8 @@ namespace EtudeV2
                     "~/Scripts/angular-route.min.js"
                 ));
 
+            /* Project bundles */
+
             bundles.Add(new ScriptBundle("~/bundles/projectApp").Include(
                     "~/Scripts/projectApp.js",
                     "~/Scripts/Controllers/projects/projectsController.js",
@@ -45,10 +47,22 @@ namespace EtudeV2
                     "~/Scripts/Services/projects/projectCreateService.js"
                 ));
 
+            /* Track bundles */
+
             bundles.Add(new ScriptBundle("~/bundles/trackApp").Include(
                     "~/Scripts/trackApp.js",
                     "~/Scripts/Controllers/tracks/tracksController.js",
                     "~/Scripts/Services/tracks/tracksService.js"
+                ));
+            
+            bundles.Add(new ScriptBundle("~/bundles/trackViewApp").Include(
+                    "~/Scripts/Controllers/tracks/trackViewController.js",
+                    "~/Scripts/Services/tracks/trackViewService.js"
+                ));
+            
+            bundles.Add(new ScriptBundle("~/bundles/trackCreateApp").Include(
+                    "~/Scripts/Controllers/tracks/trackCreateController.js",
+                    "~/Scripts/Services/tracks/trackCreateService.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

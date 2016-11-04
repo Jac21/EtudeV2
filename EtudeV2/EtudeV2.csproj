@@ -294,6 +294,8 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\Controllers\projects\projectCreateController.js" />
     <Content Include="Scripts\Controllers\projects\projectViewController.js" />
+    <Content Include="Scripts\Controllers\tracks\trackViewController.js" />
+    <Content Include="Scripts\Controllers\tracks\trackCreateController.js" />
     <Content Include="Scripts\Controllers\tracks\tracksController.js" />
     <Content Include="Scripts\jasmine-samples\Player.js" />
     <Content Include="Scripts\jasmine-samples\PlayerSpec.js" />
@@ -318,6 +320,8 @@
     <Content Include="Scripts\Services\projects\projectCreateService.js" />
     <Content Include="Scripts\Services\projects\projectsService.js" />
     <Content Include="Scripts\Services\projects\projectViewService.js" />
+    <Content Include="Scripts\Services\tracks\trackCreateService.js" />
+    <Content Include="Scripts\Services\tracks\trackViewService.js" />
     <Content Include="Scripts\Services\tracks\tracksService.js" />
     <Content Include="Scripts\trackApp.js" />
     <Content Include="Scripts\_references.js" />
