@@ -4,18 +4,24 @@
     angular.module('trackApp')
         .controller('trackCreateController', trackCreateController);
 
-    trackCreateController.$inject = ['$scope', '$routeParams', 'Track'];
+    trackCreateController.$inject = ['$scope', '$routeParams', '$location', 'Track'];
 
-    function trackCreateController($scope, $routeParams, Track) {
+    function trackCreateController($scope, $routeParams, $location, Track) {
         // controller variables
-        $scope.newTrack = {};
+        $scope.newTrack = new Track();
         $scope.message = '';
 
         // add function
         $scope.add = function () {
-            $scope.message = '';
-
             console.log($scope.newTrack);
+
+            $scope.newTrack.$save(
+                function() {
+                    $location.path('/api/projects/');
+                },
+                function(response) {
+                    alert('Something messed up!');
+                });
         }
     }
 })();

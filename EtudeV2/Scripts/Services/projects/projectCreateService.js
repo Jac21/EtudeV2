@@ -6,7 +6,10 @@
         '$resource',
         function ($resource) {
             // performs AJAX on route
-            return $resource('/api/projects/:projectId', { projectID: '@projectID' }, null);
+            return $resource('/api/projects', { projectID: '@projectID' },
+            {
+                save: {method: 'POST'}
+            });
         }
     ]);
 })();

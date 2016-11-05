@@ -5,7 +5,10 @@
     trackCreateService.factory('Track', [
         '$resource',
         function($resource) {
-            return $resource('/api/tracks/:trackId', {trackID: '@trackID'}, null);
+            return $resource('/api/tracks', {trackID: '@trackID'},
+            {
+                save: {method: 'POST'}
+            });
         }
     ]);
 })();
