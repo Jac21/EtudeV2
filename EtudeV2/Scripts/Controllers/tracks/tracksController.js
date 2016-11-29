@@ -4,20 +4,22 @@
     angular.module('trackApp')
         .controller('tracksController', tracksController);
 
-    tracksController.$inject = ['$scope', 'Tracks'];
+    tracksController.$inject = ['Tracks'];
 
-    function tracksController($scope, Tracks) {
+    function tracksController(Tracks) {
+        var vm = this;
+
         // controller variables
-        $scope.newTrack = {};
-        $scope.message = '';
+        vm.newTrack = {};
+        vm.message = '';
 
-        $scope.Tracks = Tracks.query();
+        vm.Tracks = Tracks.query();
 
         // add function
-        $scope.add = function () {
-            $scope.message = '';
+        vm.add = function () {
+            vm.message = '';
 
-            console.log($scope.newTrack);
+            console.log(vm.newTrack);
         }
     }
 })();

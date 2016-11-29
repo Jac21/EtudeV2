@@ -1,11 +1,11 @@
-﻿<div class="container" ng-controller="projectViewController">
+﻿<div class="container" ng-controller="projectViewController as vm">
     <div class="row">
         <a id="create-track" class="waves-effect waves-light btn col s3 offset-s9 " href="/#/create-track">Add a Track</a>
     </div>
     <!--Project Detail Header-->
     <div class="row project-detail-header" id="project-row">
-        <h2>{{project.Name}}</h2>
+        <h2>{{vm.project.Name}}</h2>
 
-        <h4>{{project.Description}}</h4>
+        <h4>{{vm.project.Description}}</h4>
     </div>
 </div>

@@ -1,4 +1,4 @@
-﻿<div class="container" ng-controller="projectCreateController">
+﻿<div class="container" ng-controller="projectCreateController as vm">
     
     <div class="row">
         <h3>Create a new Project or <a href="/#/api/projects">Go Back</a></h3>
@@ -10,7 +10,7 @@
                     <input type="text"
                            class="validate"
                            id="project-name"
-                           ng-model="newProject.Name">
+                           ng-model="vm.newProject.Name">
                     <label for="first_name">Project Name</label>
                 </div>
 
@@ -21,7 +21,7 @@
                     <input type="text"
                            class="validate"
                            id="project-description"
-                           ng-model="newProject.Description">
+                           ng-model="vm.newProject.Description">
                     <label for="last_name">Description</label>
                 </div>
 
@@ -38,17 +38,17 @@
                 <input type="file"
                        accept="image/*"
                        id="project-art"
-                       ng-model="newProject.CoverArt">
+                       ng-model="vm.newProject.CoverArt">
             </div>
 
             <div class="file-path-wrapper">
                 <input class="file-path validate"
                        type="text"
-                       ng-model="newProject.CoverArt">
+                       ng-model="vm.newProject.CoverArt">
             </div>
 
         </div>
     </form>
 
-    <button type="submit" ng-click="submit()" class="btn waves-effect waves-light" id="project-submit">Create</button>
+    <button type="submit" ng-click="vm.submit()" class="btn waves-effect waves-light" id="project-submit">Create</button>
 </div>

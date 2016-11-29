@@ -1,4 +1,4 @@
-﻿<div class="container">
+﻿<div class="container" ng-controller="trackCreateController as vm">
 
     <div class="row">
         <h3>Add a new Track or <a href="/#/api/projects">Go Back</a></h3>
@@ -6,10 +6,10 @@
             <div class="row">
 
                 <div class="input-field col s12">
-                    <input type="text" 
-                           class="validate" 
+                    <input type="text"
+                           class="validate"
                            id="track-title"
-                           ng-model="newTrack.Title">
+                           ng-model="vm.newTrack.Title">
                     <label for="track_title">Track Title</label>
                 </div>
 
@@ -20,7 +20,7 @@
                     <input type="text"
                            class="validate"
                            id="track-description"
-                           ng-model="newTrack.Description">
+                           ng-model="vm.newTrack.Description">
                     <label for="track_description">Description</label>
                 </div>
 
@@ -37,18 +37,18 @@
                 <input type="file"
                        accept="audio/*"
                        id="track-file"
-                       ng-model="newTrack.trackFile">
+                       ng-model="vm.newTrack.trackFile">
             </div>
 
             <div class="file-path-wrapper">
                 <input class="file-path validate"
                        type="text"
-                       ng-model="newTrack.trackFile">
+                       ng-model="vm.newTrack.trackFile">
             </div>
 
         </div>
     </form>
-    
-    <button type="submit" ng-click="add()" class="btn waves-effect waves-light" id="track-add">Add</button>
+
+    <button type="submit" ng-click="vm.add()" class="btn waves-effect waves-light" id="track-add">Add</button>
 </div>
 

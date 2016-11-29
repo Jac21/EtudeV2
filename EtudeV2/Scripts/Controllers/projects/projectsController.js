@@ -5,11 +5,13 @@
         .controller('projectsController', projectsController);
 
     // DI
-    projectsController.$inject = ['$scope', 'Projects'];
+    projectsController.$inject = ['Projects'];
 
     // pass projects service
-    function projectsController($scope, Projects) {
+    function projectsController(Projects) {
+        var vm = this;
+
         // data obtainment
-        $scope.Projects = Projects.query();
+        vm.Projects = Projects.query();
     }
 })();

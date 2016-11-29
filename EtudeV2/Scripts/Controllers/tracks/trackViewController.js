@@ -4,10 +4,12 @@
     angular.module('trackApp')
         .controller('trackViewController', trackViewController);
 
-    trackViewController.$inject = ['$scope', '$routeParams', 'Track'];
+    trackViewController.$inject = ['$routeParams', 'Track'];
 
-    function trackViewController($scope, $routeParams, Track) {
+    function trackViewController($routeParams, Track) {
+        var vm = this;
+
         // data obtainment
-        $scope.track = Track.get({ trackId: $routeParams.trackId });
+        vm.track = Track.get({ trackId: $routeParams.trackId });
     }
 })();

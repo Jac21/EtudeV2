@@ -5,19 +5,21 @@
         .controller('projectCreateController', projectCreateController);
 
     // DI
-    projectCreateController.$inject = ['$scope', '$routeParams', '$location', 'Project'];
+    projectCreateController.$inject = ['$routeParams', '$location', 'Project'];
 
     // pass projects service
-    function projectCreateController($scope, $routeParams, $location, Project) {
+    function projectCreateController($routeParams, $location, Project) {
+        var vm = this;
+
         // controller variables
-        $scope.newProject = new Project();
-        $scope.message = '';
+        vm.newProject = new Project();
+        vm.message = '';
 
         // submittal function
-        $scope.submit = function () {
-            console.log($scope.newProject);
+        vm.submit = function () {
+            console.log(vm.newProject);
 
-            $scope.newProject.$save(
+            vm.newProject.$save(
                 function() {
                     $location.path('/api/projects');
                 },

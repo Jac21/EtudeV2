@@ -5,11 +5,13 @@
         .controller('projectViewController', projectViewController);
 
     // DI
-    projectViewController.$inject = ['$scope', '$routeParams', 'Project'];
+    projectViewController.$inject = ['$routeParams', 'Project'];
 
     // pass projects service
-    function projectViewController($scope, $routeParams, Project) {
+    function projectViewController($routeParams, Project) {
+        var vm = this;
+
         // data obtainment
-        $scope.project = Project.get({ projectId: $routeParams.projectId });
+        vm.project = Project.get({ projectId: $routeParams.projectId });
     }
 })();

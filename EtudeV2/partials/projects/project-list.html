@@ -10,9 +10,9 @@
     </div>
 
     <!--Project Cards-->
-    <div class="row" id="project-row" ng-controller="projectsController">
+    <div class="row" id="project-row" ng-controller="projectsController as vm">
 
-        <div class="col s12 m6" ng-repeat="project in Projects">
+        <div class="col s12 m6" ng-repeat="project in vm.Projects">
             <div class="card medium hoverable">
                 <div class="card-image">
                     <img ng-src="{{project.CoverArt}}">

@@ -1,9 +1,5 @@
 ﻿<div class="container">
-    <div class="row">
-        <a id="create-proj" class="waves-effect waves-light btn col s3 offset-s9 modal-trigger " href="#">Add Track</a>
-    </div>
-
-    <div class="row" ng-controller="tracksController">
+    <div class="row" ng-controller="tracksController as vm">
         <h1>Track Listing</h1>
         <table>
             <thead>
@@ -13,7 +9,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="track in Tracks">
+            <tr ng-repeat="track in vm.Tracks">
                 <td>{{track.Title}}</td>
                 <td>{{track.Description}}</td>
             </tr>
